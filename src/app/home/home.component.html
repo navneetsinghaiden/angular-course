@@ -1,0 +1,13 @@
+<p>
+  home works!
+</p>
+
+<input type="submit" (click)="addItem()" [value]="buttonText">
+<!--<input type="submit" (click)="addItem()" value={{buttonText}}>-->
+
+<input type="text" class="text" name="item" [(ngModel)]="addtext"><br>
+
+<br><span>{{addtext}}</span>
+<p> total items added : {{itemCount}}</p>
+
+

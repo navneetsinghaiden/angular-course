@@ -1,0 +1,19 @@
+<h2>Menu</h2>
+
+<label>Name : </label>
+<input type="text" #name>
+
+<label>Category :</label>
+<input type="text" #category>
+
+<input type="submit" (click)="add(name.value,category.value)">
+
+<h2>Menu List</h2>
+<div *ngFor='let f of foods'>
+  <div *ngIf="f.category != 'Veg'">
+    <span>{{f.name}}</span> | <span isVegCategory>{{f.category}}</span>
+  </div>
+  <div *ngIf="f.category == 'Veg'">
+  <span>{{f.name}}</span> | <span>{{f.category}}</span>
+  </div>
+</div>
